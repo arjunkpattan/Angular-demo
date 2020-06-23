@@ -1,0 +1,19 @@
+<div class="container-fluid">
+    <br><br>
+    <div class="row">
+        <div class="col-md-6">
+            <input type="text" class="form-control" [(ngModel)]="nme" name="txt">
+        </div>
+        <div class="col-md-6">
+            <input type="button" class="btn btn-primary" name="btn" value="add" (click)="show()">
+        </div>
+    </div>
+
+
+    <ul>
+        <li *ngFor="let i of a; let k = index">
+            {{i}} <input type="button" value="X" (click)="remove(k)">
+        </li>
+    </ul>
+
+</div>

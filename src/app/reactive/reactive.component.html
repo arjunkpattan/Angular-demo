@@ -1,0 +1,19 @@
+<form [formGroup]="rgstrForm">
+    <div class="form-group">
+        <label for="username">Name</label>
+        <input type="text" formControlName="name" class="form-group" id="username" required>
+        <div class="alert aler-danger" *ngIf="name.invalid && name.touched">
+            <div *ngIf="name.errors.required">Name is required</div>
+            <div *ngIf="name.errors.containSpace">Name does not contain space</div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="age">Age</label>
+        <input type="text" formControlNmae="age" class="form-group" id="age" required>
+        <div class="alert alert-danger" *ngIf="age.invalid && age.touched">
+            <div *ngIf="name.errors.required">Age is required</div>
+        </div>
+    </div>
+
+</form>
